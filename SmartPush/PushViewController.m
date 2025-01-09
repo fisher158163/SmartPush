@@ -388,6 +388,7 @@
 - (BOOL)isDarkMode {
     if (@available(macOS 10.14, *)) {
         NSDictionary *dict = [[NSUserDefaults standardUserDefaults] persistentDomainForName:NSGlobalDomain];
+        NSLog(@"%@",dict);
         BOOL isDarkMode = [[dict objectForKey:@"AppleInterfaceStyle"] isEqualToString:@"Dark"];
         return isDarkMode;
     }
